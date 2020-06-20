@@ -11,11 +11,12 @@
         padding: 4px;
       }
 
-      tutorial + tutorial {
+      body > * + * {
         margin-top: 2em;
       }
 
-      .tutorial h1 {
+      h1,
+      h2 {
         margin: 0;
         font-size: 1em;
       }
@@ -32,9 +33,48 @@
       .active {
         font-weight: bold;
       }
+
+      .quests {
+        background-color: #eef;
+        padding: 4px;
+        max-width: 320px;
+      }
+
+      .unlocked {
+        font-weight: bold;
+      }
+
+      .completed {
+        text-decoration: line-through;
+        color: #666;
+      }
+
+      .locked {
+        color: #888;
+      }
     </style>
   </head>
   <body>
+    <p>List of quests</p>
+
+    <div class="quests">
+      <h2>Basics</h2>
+      <ol>
+        <li class="quest completed">Writing Lists <button>Again</button></li>
+        <li class="quest unlocked">Building Trees <button>Start</button></li>
+      </ol>
+      <h2>Core Features</h2>
+      <ol>
+        <li class="quest locked">Bidirectional Links <button disabled>Start</button></li>
+        <li class="quest locked">One Item, Multiple Places <button disabled>Start</button></li>
+      </ol>
+      <h2>Advanced Tips</h2>
+      <ol>
+        <li class="quest locked">Focus and Navigation <button disabled>Start</button></li>
+        <li class="quest locked">Removing Items <button disabled>Start</button></li>
+      </ol>
+    </div>
+
     <p>Step 1:</p>
 
     <div class="tutorial">
@@ -77,6 +117,57 @@
       <h1>Bidirectional Links (2/3)</h1>
       <button>&lt; Back</button>
       <button disabled>Next &gt;</button>
+    </div>
+
+    <p>After finishing Step 3:</p>
+
+    <div class="tutorial">
+      <div class="step">
+        Good job! Press the button below to unlock the next tutorials, which will teach you about two of
+        Thinktool's unique features.
+        <button>Unlock <i>Core Features</i></button>
+      </div>
+      <hr />
+      <h1>Bidirectional Links (3/3)</h1>
+      <button>&lt; Back</button>
+      <hr />
+      <div class="quests">
+        <h2>Basics</h2>
+        <ol>
+          <li class="quest completed">Writing Lists <button>Again</button></li>
+          <li class="quest unlocked">Building Trees <button>Start</button></li>
+        </ol>
+        <h2>Core Features</h2>
+        <ol>
+          <li class="quest locked">Bidirectional Links <button disabled>Start</button></li>
+          <li class="quest locked">One Item, Multiple Places <button disabled>Start</button></li>
+        </ol>
+        <h2>Advanced Tips</h2>
+        <ol>
+          <li class="quest locked">Focus and Navigation <button disabled>Start</button></li>
+          <li class="quest locked">Removing Items <button disabled>Start</button></li>
+        </ol>
+      </div>
+    </div>
+
+    <p>List of quests after unlocking Core Features:</p>
+
+    <div class="quests">
+      <h2>Basics</h2>
+      <ol>
+        <li class="quest completed">Writing Lists <button>Again</button></li>
+        <li class="quest completed">Building Trees <button>Again</button></li>
+      </ol>
+      <h2>Core Features</h2>
+      <ol>
+        <li class="quest unlocked">Bidirectional Links <button>Start</button></li>
+        <li class="quest unlocked">One Item, Multiple Places <button>Start</button></li>
+      </ol>
+      <h2>Advanced Tips</h2>
+      <ol>
+        <li class="quest locked">Focus and Navigation <button disabled>Start</button></li>
+        <li class="quest locked">Removing Items <button disabled>Start</button></li>
+      </ol>
     </div>
   </body>
 </html>
