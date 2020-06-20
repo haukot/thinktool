@@ -1,0 +1,20 @@
+SHOW SPLASH
+BUTTON "Learn to use Thinktool" -> CONTINUE
+
+TEXT "You can use Thinktool like a basic outliner."
+INTERACTIVE STEP "1. Click inside 'New item' and type something."
+INTERACTIVE STEP "2. You can also click inside an existing item, and then press 'Enter' to create a new item"
+INTERACTIVE STEP "3. Reorder you items with 'Up' and 'Down'"
+INTERACTIVE STEP "4. Organize your items in a tree with 'Indent' and 'Unindent'"
+INTERACTIVE STEP "5. Click on the bullet point to fold subtree"
+
+TEXT "Good job! Now you can unlock 'Bidirectional Links', which will teach you about Thinktool's coolest feature"
+BUTTON "Unlock 'Bidirectional Links'" -> UNLOCK 'Bidirectional Links'
+
+WAIT 'Bidirectional Links'
+
+TEXT "Thinktool has bidirectional links just like Roam Research or Obsidian. Let me teach you how to use them."
+...
+
+
+
